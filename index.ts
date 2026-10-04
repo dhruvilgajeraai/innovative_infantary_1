@@ -1,307 +1,362 @@
-export type UserRole = 'owner' | 'manager' | 'front_desk' | 'staff' | 'coach' | 'member';
+export type AccountType = 'normal' | 'staff' | 'authority' | 'superadmin';
 
-export type MembershipTier = 'gold' | 'silver' | 'junior';
+export type AuthorityId = 
+  | 'SUPER-001'
+  | 'ADMIN-001'
+  | 'SALES-001'
+  | 'BOOKING-001'
+  | 'MEMBER-001'
+  | 'SPORT-001'
+  | 'SHOP-001'
+  | 'POS-001'
+  | 'EVENT-001'
+  | 'FINANCE-001'
+  | 'CRM-001'
+  | 'STAFF-001'
+  | 'MARKETING-001'
+  | 'SERVICE-001'
+  | 'CONTENT-001';
 
-export interface Member {
+export type SportType = 'football' | 'tennis' | 'cricket' | 'badminton' | 'padel' | 'running' | 'pool' | 'volleyball';
+
+export type MembershipTier = 'gold' | 'silver' | 'junior' | 'none';
+
+export interface User {
   id: string;
-  memberId: string;
   name: string;
   email: string;
   phone: string;
-  avatar: string;
-  tier: MembershipTier;
-  sport?: string;
-  joinDate: string;
-  expiryDate: string;
-  status: 'active' | 'expiring' | 'expired' | 'suspended';
-  courtDiscount: number; // e.g. 50% for gold, 25% for silver, 35% for junior
-  shopDiscount: number; // e.g. 20% for gold, 10% for silver, 15% for junior
-  barDiscount: number; // e.g. 15% for gold, 10% for silver, 10% for junior
-  walletBalance: number;
-  totalBookings: number;
-  totalSpent: number;
-  lastVisit: string;
-  notes?: string;
-}
-
-export type CourtStatus = 'available' | 'booked' | 'maintenance' | 'social';
-
-export interface CourtSlot {
-  id: string;
-  courtId: string;
-  courtName: string;
-  sport: 'Tennis' | 'Padel' | 'Badminton' | 'Squash' | 'Cricket' | string;
-  time: string; // e.g. "06:00", "06:30"
-  durationMinutes: number; // usually 60 mins
-  status: CourtStatus;
-  bookedBy?: {
-    memberId: string;
-    memberName: string;
-    memberTier: MembershipTier;
-    phone: string;
-    bookingId: string;
-    paymentStatus: 'paid' | 'pending';
-    price: number;
-  };
-  maintenanceReason?: string;
-  socialSessionId?: string;
-}
-
-export interface CourtBooking {
-  id: string;
-  courtId: string;
-  courtName: string;
-  sport: string;
-  date: string;
-  time: string;
-  durationMinutes: number;
-  memberId: string;
-  memberName: string;
-  memberTier: MembershipTier;
-  basePrice: number;
-  discountApplied: number;
-  finalPrice: number;
-  paymentMethod: 'UPI' | 'Card' | 'Cash' | 'Wallet' | 'Online';
-  paymentStatus: 'paid' | 'pending' | 'refunded';
+  organization?: string;
+  accountType: AccountType;
+  emailVerified: boolean;
+  assignedAuthorities: AuthorityId[];
+  activeAuthority?: AuthorityId;
+  membershipTier: MembershipTier;
+  membershipExpiry?: string;
+  avatar?: string;
   createdAt: string;
 }
 
-export interface SocialSession {
+export interface FixedAuthorityConfig {
+  id: AuthorityId;
+  name: string;
+  description: string;
+  department: string;
+  email: string;
+  color: string;
+  icon: string;
+  defaultRoute: string;
+  permissions: string[];
+  assignedUserIds: string[];
+  isActive: boolean;
+  lastLogin?: string;
+}
+
+export type BookingStatus = 'AVAILABLE' | 'HELD' | 'BOOKED' | 'CHECKED-IN' | 'COMPLETED' | 'CANCELLED' | 'NO-SHOW';
+
+export interface Court {
   id: string;
-  title: string;
-  sport: string;
-  courtName: string;
+  name: string;
+  sport: SportType;
+  courtNumber: number;
+  indoor: boolean;
+  hourlyRate: number;
+  memberHourlyRate: number;
+  status: 'active' | 'maintenance';
+}
+
+export interface Booking {
+  id: string;
   courtId: string;
-  date: string;
-  time: string;
-  maxPlayers: number;
-  registeredPlayers: {
-    memberId: string;
-    name: string;
-    tier: MembershipTier;
-    avatar: string;
-  }[];
-  pricePerPlayer: number;
-  level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels' | string;
-  coachLead?: string;
+  courtName: string;
+  sport: SportType;
+  userId: string;
+  userName: string;
+  userEmail: string;
+  userTier: MembershipTier;
+  date: string; // YYYY-MM-DD
+  startTime: string; // HH:mm
+  endTime: string; // HH:mm
+  durationMinutes: number; // 60
+  amount: number;
+  status: BookingStatus;
+  paymentStatus?: 'UNPAID' | 'PAID';
+  razorpayPaymentId?: string;
+  userPhone?: string;
+  isSocialPlay?: boolean;
+  checkInTime?: string;
+  createdAt: string;
 }
 
 export interface Product {
   id: string;
+  sku: string;
   name: string;
-  category: 'Rackets' | 'Balls' | 'Shoes' | 'Accessories' | 'Apparel' | 'Nutrition' | string;
-  sport: string;
+  category: 'rackets' | 'balls' | 'shoes' | 'accessories' | 'apparel' | 'beverages' | 'snacks';
   price: number;
+  memberPrice: number;
   stock: number;
   lowStockThreshold: number;
-  sku: string;
   image: string;
-  description: string;
-  memberDiscountPercent: number;
-  brand: string;
-  rating: number;
-  totalSold: number;
+  sport?: SportType;
 }
 
-export interface ShopOrder {
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export interface Order {
   id: string;
-  orderNumber: string;
-  date: string;
+  userId?: string;
   customerName: string;
-  customerId?: string;
-  customerTier?: MembershipTier;
+  customerEmail?: string;
+  customerPhone?: string;
+  memberTier?: MembershipTier;
+  fulfillmentType?: 'pickup' | 'delivery';
+  deliveryAddress?: string;
+  type: 'online' | 'counter' | 'pos_bar';
   items: {
     productId: string;
     productName: string;
     quantity: number;
-    unitPrice: number;
-    total: number;
+    price: number;
   }[];
   subtotal: number;
-  discountAmount: number;
+  discount: number;
+  tax: number;
   total: number;
-  channel: 'In-Club Counter' | 'Online Web' | string;
-  paymentMethod: 'UPI' | 'Card' | 'Cash' | 'Online' | string;
-  paymentStatus: 'paid' | 'pending';
-  status: 'Completed' | 'Ready for Pickup' | 'Processing' | string;
+  paymentMethod: 'cash' | 'card' | 'upi' | 'upi_qr' | 'upi_gpay' | 'upi_phonepe' | 'upi_paytm' | 'upi_bhim' | 'tab' | 'razorpay';
+  paymentStatus: 'paid' | 'completed' | 'pending' | 'tab_open';
+  tableNumber?: number;
+  tabId?: string;
+  createdAt: string;
 }
 
-export interface CafeteriaItem {
+export interface TransactionRecord {
   id: string;
-  name: string;
-  category: 'Drinks' | 'Coffee' | 'Protein & Energy' | 'Hot Meals' | 'Snacks' | string;
-  price: number;
-  image: string;
-  description: string;
-  isVegetarian?: boolean;
-  isVeg?: boolean;
-  isAvailable: boolean;
-  stock?: number;
-  calories?: string;
-  prepTimeMinutes: number;
+  source: 'court_booking' | 'pro_shop' | 'pos_cafe' | 'membership' | 'event_ticket' | 'invoice';
+  customerName: string;
+  customerEmail?: string;
+  customerPhone?: string;
+  itemName: string;
+  amount: number;
+  paymentMethod: 'upi_qr' | 'upi_id' | 'upi_gpay' | 'upi_phonepe' | 'upi_paytm' | 'upi_bhim' | 'card' | 'cash';
+  upiId?: string;
+  referenceId: string;
+  status: 'COMPLETED' | 'PENDING' | 'REFUNDED';
+  timestamp: string;
+  notes?: string;
 }
 
 export interface POSTable {
   id: number;
   name: string;
   capacity: number;
-  status: 'available' | 'occupied' | 'payment_pending';
-  currentOrderId?: string;
-  occupiedSince?: string;
+  status: 'vacant' | 'occupied' | 'reserved';
+  activeTabId?: string;
   guestCount?: number;
+  currentTotal?: number;
 }
 
-export interface KDSOrder {
+export interface POSTab {
   id: string;
-  orderNumber: string;
-  tableNumber: string | number;
+  tableNumber: number;
   customerName: string;
-  memberName?: string;
-  customerId?: string;
-  customerTier?: MembershipTier;
-  items: {
-    itemId?: string;
-    name: string;
-    quantity: number;
+  memberTier?: MembershipTier;
+  openedAt: string;
+  orders: {
+    time: string;
+    item: string;
+    qty: number;
     price: number;
-    notes?: string;
   }[];
-  subtotal: number;
-  discount: number;
   total: number;
-  paymentMethod: string;
-  paymentStatus?: 'paid' | 'pending';
-  status: 'New' | 'Preparing' | 'Ready' | 'Completed' | 'new' | 'preparing' | 'ready' | 'served' | 'Served';
-  time?: string;
-  createdAt: string;
-  updatedAt: string;
+  status: 'open' | 'settled';
 }
 
-export type CRMStage = 'new' | 'trial_booked' | 'trial_attended' | 'follow_up' | 'converted' | 'member' | 'lost' | 'contacted' | 'interested';
+export interface ClubEvent {
+  id: string;
+  title: string;
+  description: string;
+  sport: SportType | 'all';
+  date: string;
+  time: string;
+  location: string;
+  capacity: number;
+  registeredCount: number;
+  ticketPriceRegular: number;
+  ticketPriceMember: number;
+  status: 'upcoming' | 'ongoing' | 'completed' | 'cancelled';
+  organizer: string;
+}
 
-export interface CRMEnquiry {
+export interface EventTicket {
+  id: string;
+  eventId: string;
+  eventTitle: string;
+  userId: string;
+  userName: string;
+  userEmail: string;
+  qrCode: string;
+  checkedIn: boolean;
+  checkedInAt?: string;
+  paidAmount: number;
+  purchasedAt: string;
+}
+
+export type LeadStatus = 'NEW' | 'CONTACTED' | 'TRIAL' | 'PROPOSAL' | 'CONVERTED' | 'LOST';
+
+export interface Lead {
   id: string;
   name: string;
   email: string;
   phone: string;
-  sport: string;
-  preferredPlan: MembershipTier | 'undecided';
-  stage: CRMStage;
-  source: 'Website Form' | 'Walk-in' | 'Phone Call' | 'Referral' | 'Instagram' | string;
+  interest: SportType | 'membership' | 'corporate' | 'trial';
+  status: LeadStatus;
+  notes: string;
+  value: number;
   assignedStaff: string;
-  lastContacted: string;
-  followUpDate?: string;
-  trialDate?: string;
-  trialSlot?: string;
-  notes: any;
   createdAt: string;
+  lastContact: string;
+}
+
+export interface BusinessClient {
+  id: string;
+  companyName: string;
+  contactPerson: string;
+  email: string;
+  phone: string;
+  contractType: 'Corporate Tournaments' | 'Annual Court Booking' | 'Employee Wellness' | 'Sponsorship';
+  annualValue: number;
+  status: 'Active' | 'Under Review' | 'Proposal Sent';
+  startDate: string;
+  endDate: string;
+}
+
+export interface Invoice {
+  id: string;
+  invoiceNumber: string;
+  clientOrMemberName: string;
+  type: 'membership' | 'court_hire' | 'corporate' | 'shop_bulk' | 'event_sponsorship';
+  amount: number;
+  tax: number;
+  total: number;
+  dueDate: string;
+  status: 'paid' | 'pending' | 'overdue';
+  paidAt?: string;
+  createdAt: string;
+}
+
+export interface Expense {
+  id: string;
+  category: 'maintenance' | 'utilities' | 'equipment' | 'payroll' | 'marketing' | 'hospitality';
+  title: string;
+  amount: number;
+  recordedBy: string;
+  date: string;
+  status: 'approved' | 'pending' | 'rejected';
 }
 
 export interface StaffMember {
   id: string;
   name: string;
-  role: string;
+  role: 'Head Coach' | 'Assistant Coach' | 'Front Desk Officer' | 'Barista & F&B' | 'Groundskeeper' | 'Fitness Trainer';
+  sport?: SportType;
   email: string;
   phone: string;
-  avatar: string;
-  shift: string;
-  status?: string;
-  todayStatus?: string;
-  specialty?: string;
-  clockInTime?: string;
+  shift: 'Morning (06:00 - 14:00)' | 'Evening (14:00 - 22:00)' | 'Full Day';
+  status: 'on_duty' | 'off_duty' | 'leave';
   attendanceRate: number;
-  monthlySalary: number;
-  assignedCourts?: string[];
 }
 
-export interface LeaveRequest {
+export interface StaffTask {
   id: string;
-  staffId: string;
-  staffName: string;
-  role: string;
-  startDate: string;
-  endDate: string;
-  reason: string;
-  status: 'Pending' | 'Approved' | 'Rejected';
-  appliedDate: string;
+  title: string;
+  assignedTo: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  status: 'todo' | 'in_progress' | 'completed';
+  dueDate: string;
 }
 
-export interface UnifiedPayment {
+export interface SupportTicket {
   id: string;
-  transactionId: string;
-  source: 'Membership' | 'Court Booking' | 'Pro Shop' | 'Cafeteria & Bar' | string;
-  customerName: string;
-  customerId?: string;
-  customerTier?: MembershipTier;
-  amount: number;
-  date: string;
-  time: string;
-  paymentMethod?: string;
-  method?: string;
-  status: 'Paid' | 'Pending' | 'Refunded' | string;
-  referenceId?: string;
-  description: string;
+  userId: string;
+  userName: string;
+  subject: string;
+  category: 'booking' | 'membership' | 'facilities' | 'billing' | 'gear_shop';
+  priority: 'low' | 'medium' | 'high';
+  status: 'open' | 'in_progress' | 'resolved';
+  createdAt: string;
+  message: string;
+  response?: string;
 }
 
-export type PaymentRecord = UnifiedPayment;
+export interface AuditLog {
+  id: string;
+  timestamp: string;
+  actorId: string;
+  actorName: string;
+  actorType: AccountType;
+  action: string;
+  category: 'auth' | 'booking' | 'membership' | 'finance' | 'authority' | 'inventory' | 'security';
+  details: string;
+  ipAddress?: string;
+}
 
-export interface NotificationItem {
+export interface AppNotification {
   id: string;
   title: string;
   message: string;
-  category: 'booking' | 'membership' | 'inventory' | 'pos' | 'crm' | 'maintenance' | 'payment' | string;
-  severity: 'info' | 'warning' | 'success' | 'critical';
-  timestamp: string;
+  type: 'info' | 'success' | 'warning' | 'error';
+  authorityScope?: AuthorityId | 'all' | 'user';
+  userId?: string;
   read: boolean;
-  actionRoute?: string;
-  relatedId?: string;
+  createdAt: string;
 }
 
-export interface MaintenanceTask {
+export interface Volunteer {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  skills: string[];
+  eventAssigned?: string;
+  status: 'active' | 'available' | 'inactive';
+  hoursLogged: number;
+}
+
+export interface Fundraiser {
   id: string;
   title: string;
-  courtName?: string;
-  courtOrEquipment: string;
-  category: string;
-  priority: 'Critical' | 'High' | 'Medium' | 'Low' | string;
-  status: 'Reported' | 'Assigned' | 'In Progress' | 'Completed' | string;
-  assignedStaff?: string;
-  assignedTo?: string;
-  reportedDate?: string;
-  scheduledDate?: string;
-  scheduledTime?: string;
-  dueDate: string;
-  costEstimate: number;
   description: string;
-  taskDescription?: string;
-  courtIdAffected?: string;
+  targetAmount: number;
+  currentAmount: number;
+  donorCount: number;
+  deadline: string;
 }
 
-export interface MemberActivity {
+export interface Election {
   id: string;
+  title: string;
+  role: string;
+  candidates: {
+    id: string;
+    name: string;
+    votes: number;
+    bio: string;
+  }[];
+  totalVotes: number;
+  status: 'active' | 'closed';
+  endDate: string;
+}
+
+export interface ReimbursementRequest {
+  id: string;
+  staffName: string;
+  title: string;
+  amount: number;
+  receiptUrl?: string;
+  status: 'pending' | 'approved' | 'rejected';
   date: string;
-  time: string;
-  type: 'joined' | 'court_booked' | 'shop_purchase' | 'cafeteria_order' | 'payment' | 'social_play' | 'tier_upgrade';
-  title: string;
-  description: string;
-  amount?: number;
-  badge?: string;
 }
-
-export const COURTS_LIST = [
-  { id: 'c1', name: 'Arena 1 — Tennis', sport: 'Tennis', surface: 'Italian Red Clay', lights: '1200 Lux Pro', basePricePerHour: 800 },
-  { id: 'c2', name: 'Arena 2 — Badminton', sport: 'Badminton', surface: 'Yonex Pro Cushion Mat', lights: 'Olympic Standard', basePricePerHour: 600 },
-  { id: 'c3', name: 'Arena 3 — Cricket Nets & Box', sport: 'Cricket', surface: 'High-Density Astro Turf', lights: 'Floodlight Pro LED', basePricePerHour: 1200 },
-  { id: 'c4', name: 'Arena 4 — Table Tennis', sport: 'Table Tennis', surface: 'Olympic Non-Slip Floor', lights: 'Diffused Anti-Glare', basePricePerHour: 500 },
-  { id: 'c5', name: 'Arena 5 — Pool & Billiards', sport: 'Pool', surface: 'Rasson Championship Slate', lights: 'Overhead Warm LED', basePricePerHour: 550 },
-  { id: 'c6', name: 'Arena 6 — Squash', sport: 'Squash', surface: 'WSF Solid Maple Hardwood', lights: '1000 Lux Glassback', basePricePerHour: 700 }
-];
-
-export const TIME_SLOTS = [
-  '06:00', '06:30', '07:00', '07:30', '08:00', '08:30',
-  '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-  '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-  '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-  '18:00', '18:30', '19:00', '19:30', '20:00', '20:30',
-  '21:00', '21:30'
-];
