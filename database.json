@@ -1,0 +1,1398 @@
+{
+  "users": [
+    [
+      "super@arenaflow.com",
+      {
+        "id": "SUPER-002",
+        "name": "Super Admin Alias",
+        "email": "super@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "superadmin",
+        "assignedAuthorities": [
+          "SUPER-001",
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00001"
+      }
+    ],
+    [
+      "admin@arenaflow.com",
+      {
+        "id": "ADMIN-002",
+        "name": "General Admin Alias",
+        "email": "admin@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "admin",
+        "assignedAuthorities": [
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00002"
+      }
+    ],
+    [
+      "booking@arenaflow.com",
+      {
+        "id": "BOOKING-002",
+        "name": "Court Desk Booking Alias",
+        "email": "booking@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "BOOKING-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00004"
+      }
+    ],
+    [
+      "rahul@gmail.com",
+      {
+        "id": "MEMBER-RAW-001",
+        "name": "Rahul Sharma (Gold Athlete)",
+        "email": "rahul@gmail.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "gold",
+        "phone": "+91 98765 11111"
+      }
+    ],
+    [
+      "test.player@gmail.com",
+      {
+        "id": "USR-MUSN1DV3",
+        "name": "Test Champion",
+        "email": "test.player@gmail.com",
+        "passwordHash": "$2b$12$fdlrNrtyctH3fEYBLcTExeELxNmzHOS2CHQ.BZKxM.gKN/J9SQ3SC",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "none",
+        "phone": "+91 99887 76655",
+        "isVerified": true
+      }
+    ],
+    [
+      "alex.wright@gmail.com",
+      {
+        "id": "MEMBER-RAW-002",
+        "name": "Alexander Wright (Silver Member)",
+        "email": "alex.wright@gmail.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "silver",
+        "phone": "+91 98765 43210"
+      }
+    ],
+    [
+      "rebecca.s@thechampionsclub.com",
+      {
+        "id": "user-multi-01",
+        "name": "Rebecca Sterling (Manager)",
+        "email": "rebecca.s@thechampionsclub.com",
+        "phone": "+91 98765 88888",
+        "organization": "The Champions Club Ops",
+        "accountType": "staff",
+        "emailVerified": true,
+        "assignedAuthorities": [
+          "BOOKING-001",
+          "MEMBER-001",
+          "POS-001"
+        ],
+        "activeAuthority": "BOOKING-001",
+        "membershipTier": "gold",
+        "membershipExpiry": "2027-12-31",
+        "createdAt": "2026-06-01"
+      }
+    ],
+    [
+      "superadmin@arenaflow.io",
+      {
+        "id": "SUPER-001",
+        "name": "Chief Administrator (Super HQ)",
+        "email": "superadmin@arenaflow.io",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "superadmin",
+        "assignedAuthorities": [
+          "SUPER-001",
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00001"
+      }
+    ],
+    [
+      "SUPER-001",
+      {
+        "id": "SUPER-001",
+        "name": "Chief Administrator (Super HQ)",
+        "email": "superadmin@arenaflow.io",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "superadmin",
+        "assignedAuthorities": [
+          "SUPER-001",
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00001"
+      }
+    ],
+    [
+      "SUPER-002",
+      {
+        "id": "SUPER-002",
+        "name": "Super Admin Alias",
+        "email": "super@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "superadmin",
+        "assignedAuthorities": [
+          "SUPER-001",
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00001"
+      }
+    ],
+    [
+      "admin@thechampionsclub.com",
+      {
+        "id": "ADMIN-001",
+        "name": "Master General Administrator",
+        "email": "admin@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "admin",
+        "assignedAuthorities": [
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00002"
+      }
+    ],
+    [
+      "ADMIN-001",
+      {
+        "id": "ADMIN-001",
+        "name": "Master General Administrator",
+        "email": "admin@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "admin",
+        "assignedAuthorities": [
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00002"
+      }
+    ],
+    [
+      "ADMIN-002",
+      {
+        "id": "ADMIN-002",
+        "name": "General Admin Alias",
+        "email": "admin@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "admin",
+        "assignedAuthorities": [
+          "ADMIN-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00002"
+      }
+    ],
+    [
+      "sales@thechampionsclub.com",
+      {
+        "id": "SALES-001",
+        "name": "Sales & Growth Head",
+        "email": "sales@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SALES-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00003"
+      }
+    ],
+    [
+      "SALES-001",
+      {
+        "id": "SALES-001",
+        "name": "Sales & Growth Head",
+        "email": "sales@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SALES-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00003"
+      }
+    ],
+    [
+      "desk.bookings@thechampionsclub.com",
+      {
+        "id": "BOOKING-001",
+        "name": "Court Desk Operations Manager",
+        "email": "desk.bookings@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "BOOKING-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00004"
+      }
+    ],
+    [
+      "BOOKING-001",
+      {
+        "id": "BOOKING-001",
+        "name": "Court Desk Operations Manager",
+        "email": "desk.bookings@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "BOOKING-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00004"
+      }
+    ],
+    [
+      "BOOKING-002",
+      {
+        "id": "BOOKING-002",
+        "name": "Court Desk Booking Alias",
+        "email": "booking@arenaflow.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "BOOKING-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00004"
+      }
+    ],
+    [
+      "memberships@thechampionsclub.com",
+      {
+        "id": "MEMBER-001",
+        "name": "Membership Relations Head",
+        "email": "memberships@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "MEMBER-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00005"
+      }
+    ],
+    [
+      "MEMBER-001",
+      {
+        "id": "MEMBER-001",
+        "name": "Membership Relations Head",
+        "email": "memberships@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "MEMBER-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00005"
+      }
+    ],
+    [
+      "headcoach@thechampionsclub.com",
+      {
+        "id": "SPORT-001",
+        "name": "Head Coach & Athletics Director",
+        "email": "headcoach@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SPORT-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00006"
+      }
+    ],
+    [
+      "SPORT-001",
+      {
+        "id": "SPORT-001",
+        "name": "Head Coach & Athletics Director",
+        "email": "headcoach@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SPORT-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00006"
+      }
+    ],
+    [
+      "shop@thechampionsclub.com",
+      {
+        "id": "SHOP-001",
+        "name": "Pro Shop & Merchandising Head",
+        "email": "shop@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SHOP-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00007"
+      }
+    ],
+    [
+      "SHOP-001",
+      {
+        "id": "SHOP-001",
+        "name": "Pro Shop & Merchandising Head",
+        "email": "shop@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SHOP-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00007"
+      }
+    ],
+    [
+      "bar@thechampionsclub.com",
+      {
+        "id": "POS-001",
+        "name": "Bar & F&B Hospital Manager",
+        "email": "bar@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "POS-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00008"
+      }
+    ],
+    [
+      "POS-001",
+      {
+        "id": "POS-001",
+        "name": "Bar & F&B Hospital Manager",
+        "email": "bar@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "POS-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00008"
+      }
+    ],
+    [
+      "events@thechampionsclub.com",
+      {
+        "id": "EVENT-001",
+        "name": "Tournaments & Experiences Director",
+        "email": "events@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "EVENT-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00009"
+      }
+    ],
+    [
+      "EVENT-001",
+      {
+        "id": "EVENT-001",
+        "name": "Tournaments & Experiences Director",
+        "email": "events@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "EVENT-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00009"
+      }
+    ],
+    [
+      "finance@thechampionsclub.com",
+      {
+        "id": "FINANCE-001",
+        "name": "Finance & Treasury Controller",
+        "email": "finance@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "FINANCE-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00010"
+      }
+    ],
+    [
+      "FINANCE-001",
+      {
+        "id": "FINANCE-001",
+        "name": "Finance & Treasury Controller",
+        "email": "finance@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "FINANCE-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00010"
+      }
+    ],
+    [
+      "partnerships@thechampionsclub.com",
+      {
+        "id": "CRM-001",
+        "name": "Corporate Partnerships & CRM Lead",
+        "email": "partnerships@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "CRM-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00011"
+      }
+    ],
+    [
+      "CRM-001",
+      {
+        "id": "CRM-001",
+        "name": "Corporate Partnerships & CRM Lead",
+        "email": "partnerships@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "CRM-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00011"
+      }
+    ],
+    [
+      "hr@thechampionsclub.com",
+      {
+        "id": "STAFF-001",
+        "name": "Human Resources & Roster Head",
+        "email": "hr@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "STAFF-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00012"
+      }
+    ],
+    [
+      "STAFF-001",
+      {
+        "id": "STAFF-001",
+        "name": "Human Resources & Roster Head",
+        "email": "hr@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "STAFF-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00012"
+      }
+    ],
+    [
+      "marketing@thechampionsclub.com",
+      {
+        "id": "MARKETING-001",
+        "name": "Marketing & Digital Campaigns Head",
+        "email": "marketing@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "MARKETING-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00013"
+      }
+    ],
+    [
+      "MARKETING-001",
+      {
+        "id": "MARKETING-001",
+        "name": "Marketing & Digital Campaigns Head",
+        "email": "marketing@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "MARKETING-001"
+        ],
+        "membershipTier": "gold",
+        "phone": "+91 98765 00013"
+      }
+    ],
+    [
+      "support@thechampionsclub.com",
+      {
+        "id": "SERVICE-001",
+        "name": "Member Helpdesk & Support Lead",
+        "email": "support@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SERVICE-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00014"
+      }
+    ],
+    [
+      "SERVICE-001",
+      {
+        "id": "SERVICE-001",
+        "name": "Member Helpdesk & Support Lead",
+        "email": "support@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "SERVICE-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00014"
+      }
+    ],
+    [
+      "content@thechampionsclub.com",
+      {
+        "id": "CONTENT-001",
+        "name": "Website CMS & Media Lead",
+        "email": "content@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "CONTENT-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00015"
+      }
+    ],
+    [
+      "CONTENT-001",
+      {
+        "id": "CONTENT-001",
+        "name": "Website CMS & Media Lead",
+        "email": "content@thechampionsclub.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "staff",
+        "assignedAuthorities": [
+          "CONTENT-001"
+        ],
+        "membershipTier": "silver",
+        "phone": "+91 98765 00015"
+      }
+    ],
+    [
+      "MEMBER-RAW-001",
+      {
+        "id": "MEMBER-RAW-001",
+        "name": "Rahul Sharma (Gold Athlete)",
+        "email": "rahul@gmail.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "gold",
+        "phone": "+91 98765 11111"
+      }
+    ],
+    [
+      "MEMBER-RAW-002",
+      {
+        "id": "MEMBER-RAW-002",
+        "name": "Alexander Wright (Silver Member)",
+        "email": "alex.wright@gmail.com",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "silver",
+        "phone": "+91 98765 43210"
+      }
+    ],
+    [
+      "919227067694@arenaflow.club",
+      {
+        "id": "USR-PHONE-MUT8UH3F",
+        "name": "Member 7694",
+        "email": "919227067694@arenaflow.club",
+        "passwordHash": "$2a$12$e8x0c5/5VkWL7q3t3k3E0.9L0eZ0F8YF8F8F8F8F8F8F8F8F8F8F8",
+        "accountType": "normal",
+        "assignedAuthorities": [],
+        "membershipTier": "silver",
+        "phone": "+919227067694",
+        "isVerified": true
+      }
+    ]
+  ],
+  "courts": [
+    [
+      "c-football-1",
+      {
+        "id": "c-football-1",
+        "name": "5v5 FIFA AstroTurf Football Pitch",
+        "sport": "football",
+        "courtNumber": 1,
+        "indoor": false,
+        "hourlyRate": 1500,
+        "memberHourlyRate": 1000,
+        "status": "active"
+      }
+    ],
+    [
+      "c-cricket-1",
+      {
+        "id": "c-cricket-1",
+        "name": "Floodlit Box Cricket Turf",
+        "sport": "cricket",
+        "courtNumber": 1,
+        "indoor": false,
+        "hourlyRate": 1200,
+        "memberHourlyRate": 800,
+        "status": "active"
+      }
+    ],
+    [
+      "c-tennis-1",
+      {
+        "id": "c-tennis-1",
+        "name": "Centre Clay Court 1",
+        "sport": "tennis",
+        "courtNumber": 1,
+        "indoor": false,
+        "hourlyRate": 800,
+        "memberHourlyRate": 500,
+        "status": "active"
+      }
+    ],
+    [
+      "c-tennis-2",
+      {
+        "id": "c-tennis-2",
+        "name": "Grand Slam Hard Court 2",
+        "sport": "tennis",
+        "courtNumber": 2,
+        "indoor": true,
+        "hourlyRate": 700,
+        "memberHourlyRate": 450,
+        "status": "active"
+      }
+    ],
+    [
+      "c-padel-1",
+      {
+        "id": "c-padel-1",
+        "name": "Panoramic Glass Padel Court 1",
+        "sport": "padel",
+        "courtNumber": 1,
+        "indoor": true,
+        "hourlyRate": 1600,
+        "memberHourlyRate": 1100,
+        "status": "active"
+      }
+    ],
+    [
+      "c-padel-2",
+      {
+        "id": "c-padel-2",
+        "name": "Pro Glass Padel Court 2",
+        "sport": "padel",
+        "courtNumber": 2,
+        "indoor": true,
+        "hourlyRate": 1600,
+        "memberHourlyRate": 1100,
+        "status": "active"
+      }
+    ],
+    [
+      "c-badminton-1",
+      {
+        "id": "c-badminton-1",
+        "name": "BWF Indoor Wooden Court A",
+        "sport": "badminton",
+        "courtNumber": 1,
+        "indoor": true,
+        "hourlyRate": 400,
+        "memberHourlyRate": 250,
+        "status": "active"
+      }
+    ],
+    [
+      "c-badminton-2",
+      {
+        "id": "c-badminton-2",
+        "name": "BWF Indoor Wooden Court B",
+        "sport": "badminton",
+        "courtNumber": 2,
+        "indoor": true,
+        "hourlyRate": 400,
+        "memberHourlyRate": 250,
+        "status": "active"
+      }
+    ],
+    [
+      "c-running-1",
+      {
+        "id": "c-running-1",
+        "name": "400m Tartan Athletic Lane 1-4",
+        "sport": "running",
+        "courtNumber": 1,
+        "indoor": false,
+        "hourlyRate": 300,
+        "memberHourlyRate": 150,
+        "status": "active"
+      }
+    ],
+    [
+      "c-pool-1",
+      {
+        "id": "c-pool-1",
+        "name": "VIP Rasson Slate Pool Table 1",
+        "sport": "pool",
+        "courtNumber": 1,
+        "indoor": true,
+        "hourlyRate": 350,
+        "memberHourlyRate": 200,
+        "status": "active"
+      }
+    ],
+    [
+      "c-pool-2",
+      {
+        "id": "c-pool-2",
+        "name": "Championship 8-Ball Snooker Table 2",
+        "sport": "pool",
+        "courtNumber": 2,
+        "indoor": true,
+        "hourlyRate": 300,
+        "memberHourlyRate": 180,
+        "status": "active"
+      }
+    ],
+    [
+      "c-volleyball-1",
+      {
+        "id": "c-volleyball-1",
+        "name": "Championship Pro Volleyball Court 1",
+        "sport": "volleyball",
+        "courtNumber": 1,
+        "indoor": true,
+        "hourlyRate": 900,
+        "memberHourlyRate": 600,
+        "status": "active"
+      }
+    ],
+    [
+      "c-volleyball-2",
+      {
+        "id": "c-volleyball-2",
+        "name": "Olympic Sand Beach Volleyball Court 2",
+        "sport": "volleyball",
+        "courtNumber": 2,
+        "indoor": false,
+        "hourlyRate": 800,
+        "memberHourlyRate": 500,
+        "status": "active"
+      }
+    ]
+  ],
+  "bookings": [],
+  "products": [
+    [
+      "p-1",
+      {
+        "id": "p-1",
+        "sku": "RKT-YON-7000",
+        "name": "Yonex Nanoray 7000 Badminton Racket (Carbon Light)",
+        "category": "rackets",
+        "price": 1899,
+        "memberPrice": 1599,
+        "stock": 18,
+        "lowStockThreshold": 5,
+        "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60",
+        "sport": "badminton"
+      }
+    ],
+    [
+      "p-2",
+      {
+        "id": "p-2",
+        "sku": "SHU-MAV-350",
+        "name": "Yonex Mavis 350 Nylon Shuttles (Pack of 6, Yellow)",
+        "category": "balls",
+        "price": 649,
+        "memberPrice": 549,
+        "stock": 45,
+        "lowStockThreshold": 12,
+        "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60",
+        "sport": "badminton"
+      }
+    ],
+    [
+      "p-3",
+      {
+        "id": "p-3",
+        "sku": "BAL-WIL-US3",
+        "name": "Wilson US Open Extra Duty Tennis Balls (Can of 3)",
+        "category": "balls",
+        "price": 599,
+        "memberPrice": 499,
+        "stock": 50,
+        "lowStockThreshold": 15,
+        "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=500&auto=format&fit=crop&q=60",
+        "sport": "tennis"
+      }
+    ],
+    [
+      "p-4",
+      {
+        "id": "p-4",
+        "sku": "RKT-HEAD-SPD",
+        "name": "Head Speed Pro Tennis Racket (Graphite)",
+        "category": "rackets",
+        "price": 12499,
+        "memberPrice": 10999,
+        "stock": 8,
+        "lowStockThreshold": 3,
+        "image": "https://images.unsplash.com/photo-1617083934555-563d332616f7?w=500&auto=format&fit=crop&q=60",
+        "sport": "tennis"
+      }
+    ],
+    [
+      "p-5",
+      {
+        "id": "p-5",
+        "sku": "FTB-NIV-STM",
+        "name": "Nivia Storm Football Size 5 (FIFA Approved)",
+        "category": "balls",
+        "price": 849,
+        "memberPrice": 699,
+        "stock": 24,
+        "lowStockThreshold": 6,
+        "image": "https://images.unsplash.com/photo-1511886929837-354d827aae26?w=500&auto=format&fit=crop&q=60",
+        "sport": "football"
+      }
+    ],
+    [
+      "p-6",
+      {
+        "id": "p-6",
+        "sku": "BAL-SG-CLB",
+        "name": "SG Club White Leather Cricket Ball (Handmade 4-Piece)",
+        "category": "balls",
+        "price": 549,
+        "memberPrice": 449,
+        "stock": 36,
+        "lowStockThreshold": 10,
+        "image": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=500&auto=format&fit=crop&q=60",
+        "sport": "cricket"
+      }
+    ],
+    [
+      "p-7",
+      {
+        "id": "p-7",
+        "sku": "PAD-BULL-IND",
+        "name": "Bullpadel Indiga Power Padel Racket",
+        "category": "rackets",
+        "price": 7999,
+        "memberPrice": 6799,
+        "stock": 6,
+        "lowStockThreshold": 2,
+        "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60",
+        "sport": "padel"
+      }
+    ],
+    [
+      "p-8",
+      {
+        "id": "p-8",
+        "sku": "SHO-NIKE-GX",
+        "name": "Nike Phantom GX Club Turf Football Shoes",
+        "category": "shoes",
+        "price": 5995,
+        "memberPrice": 4995,
+        "stock": 12,
+        "lowStockThreshold": 4,
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60",
+        "sport": "football"
+      }
+    ],
+    [
+      "p-9",
+      {
+        "id": "p-9",
+        "sku": "SHO-ASIC-UP5",
+        "name": "ASICS Upcourt 5 Indoor Badminton & Court Shoes",
+        "category": "shoes",
+        "price": 4499,
+        "memberPrice": 3799,
+        "stock": 15,
+        "lowStockThreshold": 5,
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60",
+        "sport": "badminton"
+      }
+    ],
+    [
+      "p-10",
+      {
+        "id": "p-10",
+        "sku": "ACC-NIV-GLV",
+        "name": "Nivia Pro Grip Football Goalkeeper Gloves",
+        "category": "accessories",
+        "price": 399,
+        "memberPrice": 319,
+        "stock": 20,
+        "lowStockThreshold": 6,
+        "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&auto=format&fit=crop&q=60",
+        "sport": "football"
+      }
+    ],
+    [
+      "p-11",
+      {
+        "id": "p-11",
+        "sku": "ACC-YON-GRP",
+        "name": "Yonex Super Grap Overgrip (Pack of 3, White/Black)",
+        "category": "accessories",
+        "price": 349,
+        "memberPrice": 279,
+        "stock": 60,
+        "lowStockThreshold": 15,
+        "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&auto=format&fit=crop&q=60",
+        "sport": "badminton"
+      }
+    ],
+    [
+      "p-12",
+      {
+        "id": "p-12",
+        "sku": "VB-MIK-200W",
+        "name": "Mikasa V200W Official Match Volleyball",
+        "category": "balls",
+        "price": 3499,
+        "memberPrice": 2999,
+        "stock": 14,
+        "lowStockThreshold": 4,
+        "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=500&auto=format&fit=crop&q=60",
+        "sport": "volleyball"
+      }
+    ],
+    [
+      "p-13",
+      {
+        "id": "p-13",
+        "sku": "BEV-ON-WHEY",
+        "name": "Optimum Nutrition Gold Standard Whey Shake (Chocolate 350ml)",
+        "category": "beverages",
+        "price": 180,
+        "memberPrice": 150,
+        "stock": 75,
+        "lowStockThreshold": 20,
+        "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop&q=60"
+      }
+    ],
+    [
+      "p-14",
+      {
+        "id": "p-14",
+        "sku": "BEV-GAT-500",
+        "name": "Gatorade Blue Bolt Isotonic Electrolyte Drink 500ml",
+        "category": "beverages",
+        "price": 50,
+        "memberPrice": 45,
+        "stock": 90,
+        "lowStockThreshold": 25,
+        "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=500&auto=format&fit=crop&q=60"
+      }
+    ],
+    [
+      "p-15",
+      {
+        "id": "p-15",
+        "sku": "BEV-RB-250",
+        "name": "Red Bull Energy Drink Can 250ml",
+        "category": "beverages",
+        "price": 125,
+        "memberPrice": 115,
+        "stock": 65,
+        "lowStockThreshold": 20,
+        "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=500&auto=format&fit=crop&q=60"
+      }
+    ],
+    [
+      "p-16",
+      {
+        "id": "p-16",
+        "sku": "BEV-FAST-500",
+        "name": "Fast&Up Reload Electrolyte Sports Hydration 500ml",
+        "category": "beverages",
+        "price": 45,
+        "memberPrice": 35,
+        "stock": 80,
+        "lowStockThreshold": 20,
+        "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=500&auto=format&fit=crop&q=60"
+      }
+    ],
+    [
+      "p-17",
+      {
+        "id": "p-17",
+        "sku": "SNK-SUB-PAN",
+        "name": "Artisan Grilled Paneer & Veggie High-Protein Sub",
+        "category": "snacks",
+        "price": 180,
+        "memberPrice": 150,
+        "stock": 30,
+        "lowStockThreshold": 8,
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=60"
+      }
+    ],
+    [
+      "p-18",
+      {
+        "id": "p-18",
+        "sku": "SNK-SUB-CHK",
+        "name": "Artisan Grilled Chicken High-Protein Sub",
+        "category": "snacks",
+        "price": 220,
+        "memberPrice": 180,
+        "stock": 25,
+        "lowStockThreshold": 8,
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=60"
+      }
+    ]
+  ],
+  "orders": [
+    [
+      "ord-musmhhtj",
+      {
+        "customerName": "dip",
+        "customerEmail": "bajaniyadip@gmail.com",
+        "memberTier": "silver",
+        "type": "counter",
+        "fulfillmentType": "pickup",
+        "items": [
+          {
+            "productId": "p-2",
+            "productName": "Bullpadel Vertex 03 Comfort",
+            "price": 12800,
+            "quantity": 1
+          }
+        ],
+        "subtotal": 12800,
+        "discount": 1280,
+        "tax": 0,
+        "total": 12800,
+        "paymentMethod": "upi",
+        "paymentStatus": "completed",
+        "id": "ord-musmhhtj",
+        "createdAt": "2026-10-03 16:45"
+      }
+    ]
+  ],
+  "posTabs": [
+    [
+      "tab-1",
+      {
+        "id": 1,
+        "name": "Courtside Terrace 1",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-2",
+      {
+        "id": 2,
+        "name": "Courtside Terrace 2",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-3",
+      {
+        "id": 3,
+        "name": "Padel Glass View 3",
+        "capacity": 2,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-4",
+      {
+        "id": 4,
+        "name": "Lounge Sofa 4",
+        "capacity": 6,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-5",
+      {
+        "id": 5,
+        "name": "Bar High Table 5",
+        "capacity": 2,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-6",
+      {
+        "id": 6,
+        "name": "Bar High Table 6",
+        "capacity": 2,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-7",
+      {
+        "id": 7,
+        "name": "Cafeteria Booth 7",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-8",
+      {
+        "id": 8,
+        "name": "Cafeteria Booth 8",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-9",
+      {
+        "id": 9,
+        "name": "Player Recovery Deck 9",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-10",
+      {
+        "id": 10,
+        "name": "Terrace VIP 10",
+        "capacity": 8,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-11",
+      {
+        "id": 11,
+        "name": "Garden Lawn 11",
+        "capacity": 4,
+        "status": "vacant"
+      }
+    ],
+    [
+      "tab-12",
+      {
+        "id": 12,
+        "name": "Front Desk Quick Bar 12",
+        "capacity": 1,
+        "status": "vacant"
+      }
+    ]
+  ],
+  "invoices": [],
+  "staff": [
+    [
+      "stf-1",
+      {
+        "id": "stf-1",
+        "name": "David Koenig",
+        "role": "Head Coach",
+        "sport": "tennis",
+        "email": "david.k@thechampionsclub.com",
+        "phone": "+91 98765 00001",
+        "shift": "Morning (06:00 - 14:00)",
+        "status": "on_duty",
+        "attendanceRate": 98
+      }
+    ],
+    [
+      "stf-2",
+      {
+        "id": "stf-2",
+        "name": "Elena Rostova",
+        "role": "Assistant Coach",
+        "sport": "padel",
+        "email": "elena.r@thechampionsclub.com",
+        "phone": "+91 98765 00002",
+        "shift": "Evening (14:00 - 22:00)",
+        "status": "on_duty",
+        "attendanceRate": 96
+      }
+    ],
+    [
+      "stf-3",
+      {
+        "id": "stf-3",
+        "name": "Sarah Jenkins",
+        "role": "Front Desk Officer",
+        "email": "sarah.j@thechampionsclub.com",
+        "phone": "+91 98765 00003",
+        "shift": "Morning (06:00 - 14:00)",
+        "status": "on_duty",
+        "attendanceRate": 100
+      }
+    ],
+    [
+      "stf-4",
+      {
+        "id": "stf-4",
+        "name": "Marcus Bennett",
+        "role": "Barista & F&B",
+        "email": "marcus.b@thechampionsclub.com",
+        "phone": "+91 98765 00004",
+        "shift": "Evening (14:00 - 22:00)",
+        "status": "on_duty",
+        "attendanceRate": 94
+      }
+    ],
+    [
+      "stf-5",
+      {
+        "id": "stf-5",
+        "name": "Oliver Hayes",
+        "role": "Groundskeeper",
+        "email": "oliver.h@thechampionsclub.com",
+        "phone": "+91 98765 00005",
+        "shift": "Morning (06:00 - 14:00)",
+        "status": "on_duty",
+        "attendanceRate": 99
+      }
+    ],
+    [
+      "stf-6",
+      {
+        "id": "stf-6",
+        "name": "Priya Sharma",
+        "role": "Fitness Trainer",
+        "sport": "running",
+        "email": "priya.s@thechampionsclub.com",
+        "phone": "+91 98765 00006",
+        "shift": "Full Day",
+        "status": "off_duty",
+        "attendanceRate": 95
+      }
+    ]
+  ],
+  "leads": [],
+  "payments": [],
+  "auditLogs": [
+    {
+      "actorId": "ADMIN-001",
+      "actorName": "Administrator",
+      "actorType": "authority",
+      "action": "Set court Centre Clay Court 1 to active",
+      "category": "authority",
+      "details": "Court operational status toggled",
+      "id": "log-mut95mdy",
+      "timestamp": "2026-10-04 03:19"
+    },
+    {
+      "actorId": "ADMIN-001",
+      "actorName": "Administrator",
+      "actorType": "authority",
+      "action": "Set court Centre Clay Court 1 to active",
+      "category": "authority",
+      "details": "Court operational status toggled",
+      "id": "log-mut95mdy",
+      "timestamp": "2026-10-04 03:19"
+    },
+    {
+      "actorId": "ADMIN-001",
+      "actorName": "Administrator",
+      "actorType": "authority",
+      "action": "Set court Centre Clay Court 1 to maintenance",
+      "category": "authority",
+      "details": "Court operational status toggled",
+      "id": "log-mut95kgm",
+      "timestamp": "2026-10-04 03:19"
+    },
+    {
+      "actorId": "ADMIN-001",
+      "actorName": "Administrator",
+      "actorType": "authority",
+      "action": "Set court Centre Clay Court 1 to maintenance",
+      "category": "authority",
+      "details": "Court operational status toggled",
+      "id": "log-mut95kgl",
+      "timestamp": "2026-10-04 03:19"
+    },
+    {
+      "actorId": "SHOP-001",
+      "actorName": "dip",
+      "actorType": "normal",
+      "action": "Product Order Placed",
+      "category": "inventory",
+      "details": "Order #ord-musmhhtj (counter) totaling ₹12800.00",
+      "id": "log-musmhhtj",
+      "timestamp": "2026-10-03 16:45"
+    },
+    {
+      "id": "log-1",
+      "timestamp": "2026-10-03 12:40",
+      "actorId": "STAFF-001",
+      "actorName": "Marcus Bennett",
+      "actorType": "authority",
+      "action": "Order Created",
+      "category": "inventory",
+      "details": "POS Order billed on Table 1 for ₹26.00"
+    },
+    {
+      "id": "log-2",
+      "timestamp": "2026-10-03 12:30",
+      "actorId": "BOOKING-001",
+      "actorName": "Sarah Jenkins",
+      "actorType": "authority",
+      "action": "Court Check-in",
+      "category": "booking",
+      "details": "Alexander Wright checked into Panoramic Glass Padel Court 1"
+    },
+    {
+      "id": "log-3",
+      "timestamp": "2026-10-03 12:15",
+      "actorId": "SUPER-001",
+      "actorName": "Chief Administrator",
+      "actorType": "superadmin",
+      "action": "System Audit",
+      "category": "security",
+      "details": "Automated authority isolation & permission integrity check completed"
+    }
+  ],
+  "config": {
+    "razorpayKeyId": "rzp_test_champions_club_key",
+    "razorpayKeySecret": "rzp_test_champions_secret_key_2026",
+    "mode": "test"
+  }
+}
